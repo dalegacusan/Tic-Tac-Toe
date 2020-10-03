@@ -1,0 +1,191 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Header */
+#textHeader{
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.textHeaderHighlight{
+    color: rgb(165, 165, 165);
+}
+
+.players{
+    margin-bottom: 24px;
+}
+
+.playerNamesContainer {
+    display: none;
+    text-align: center;
+}
+
+.playerName {
+    display: inline-block;
+    padding: 10px 50px;
+    margin: 0;
+}
+
+.playerNameHighlight{
+    color: rgb(98, 198, 255);
+}
+
+.currentPlayer{
+    background-color: black;
+    color: white;
+}
+
+/* Header Form  */
+.playersFormContainer {
+    text-align: center;
+}
+
+.formInputContainer {
+    margin-bottom: 8px;
+}
+
+.gameStartContainer{
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#gameStartButton{
+    width: 120px;
+    padding: 9px;
+    background-color: rgb(116, 255, 116);
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+/* Game Board */
+.gameBoard{
+    text-align: center;
+    display: inline-block;
+    margin: auto;
+}
+
+.disabledGameboard{
+    pointer-events: none;
+}
+
+.row {
+    /* width: 100%; */
+}
+
+.board-spot {
+    display: inline-block;
+    padding: 50px;
+    margin: 3px;
+    min-width: 24px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.row-0{
+    background-color: rgb(245, 245, 245);
+}
+
+.row-1{
+    background-color: rgb(218, 218, 218);
+}
+
+.row-2{
+    background-color: rgb(177, 177, 177);
+}
+
+/* Modal */
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Fallback Color */
+    background-color: rgba(0,0,0,0.4); /* Background Color */
+}
+
+.modal-content{
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.modal-header{
+    padding: 2px 16px;
+    background-color: #6e9cff;
+    color: white;
+}
+
+.modal-content{
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+.modal-body{
+    padding: 25px 16px;
+}
+
+#greetingsHeader{
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.tieBody{
+    display: none;
+}
+
+.actionButtonsGameBoard{
+    display: none;
+}
+
+.actionButtons{
+    /* background-color: orange; */
+    margin-top: 50px;
+}
+
+.playAgainButton, .exitButton{
+    border: 2px solid rgb(0, 0, 0);
+    padding: 8px;
+    width: 100px;
+}
+
+.playAgainButton{
+    background-color:  rgb(116, 255, 116);
+}
+
+.exitButton{
+    background-color: rgb(255, 134, 134);
+}
+
+@keyframes animatetop{
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.close{
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
