@@ -10,6 +10,8 @@ This is your typical Tic Tac Toe Game. The app was built for human to go against
 * Javascript
   * DOM Manipulation
   * Factory Functions
+  
+I focused on the Single Responsibility Principle of SOLID in creating these Factory Functions/IIFE's. I feel that I did a great job in structuring the logic of my code, and with this, it will be much more simpler to edit different parts of the code.
 
 ## Live Demo 
 
