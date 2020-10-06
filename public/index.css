@@ -224,4 +224,11 @@ background: linear-gradient(180deg, rgba(242,242,242,1) 0%, rgba(249,249,249,1) 
     .modal-content{
         width: 80%;
     }
+    .gameStartContainer{
+        width: 100%;
+    }
+
+    #gameStartButton{
+        width: 255px;
+    }
 }
