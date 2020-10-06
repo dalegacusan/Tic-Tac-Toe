@@ -12,8 +12,7 @@
     [/] Handle event after game winner
     [/] When closing modal, disable clicking of spots
     [] Add verification system for player names form
-    [] Make dynamic board spot borders
-    [] Make responsive
+    [/] Make responsive
 
     [/] Play Again = Reset Board ONLY
     [/] Exit = Back to HOME SCREEN
@@ -60,7 +59,10 @@ const domManipulation = (() => {
     return {displayName, showHideDisplay};
 })();
 
-const GameBoard = (() => {
+const GameBoard = ((checkWinner) => {  
+
+    const {showHideDisplay} = domManipulation;
+
     const board = [
         ['&nbsp;', '&nbsp;', '&nbsp;'],
         ['&nbsp;', '&nbsp;', '&nbsp;'],
@@ -75,12 +77,12 @@ const GameBoard = (() => {
             }
         }
 
-        gameBoardContainer.style.display = "block";
+        showHideDisplay(gameBoardContainer, "block");
 
         for (let i = 0; i < board.length; i++) {
             const currentRow = board[i];
             for (let j = 0; j < currentRow.length; j++) {
-                gameBoardRow[i].innerHTML += `<div class="row-${i} spot-${j} board-spot">${currentRow[j]}</div>`;
+                gameBoardRow[i].innerHTML += `<div class="row-${i} spot-${j} board-spot"><span>${currentRow[j]}</span></div>`;
             }
         }
         
@@ -161,7 +163,6 @@ const GameController = (() => {
 
         // Check if winner has a value
         if (winner) handleGameResult(winner);
-
     }
 
     const handleGameResult = (result) => {
